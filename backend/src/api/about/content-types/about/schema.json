@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "about"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "funded": {
+      "type": "boolean"
+    },
+    "size": {
+      "type": "string"
+    },
+    "returns": {
+      "type": "enumeration",
+      "enum": [
+        "daily",
+        "weekly",
+        "monthly",
+        "quarterly",
+        "yearly"
+      ]
+    }
+  }
+}

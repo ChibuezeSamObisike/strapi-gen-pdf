@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+html,
+body {
+  width: 210mm;
+  height: 297mm;
+  margin: 0;
+  padding: 0;
+  counter-reset: page;
+}
+
+strong {
+  font-weight: 700 !important;
+}
+
+.pageNumber::after {
+  counter-increment: page;
+  content: counter(page);
+}
+
+.print-page {
+  break-after: page;
+  page-break-after: always;
+}
+
+.print-page:last-of-type {
+  page-break-after: auto;
+}
+
+@media print {
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .pageNumber::after {
+    counter-increment: page;
+    content: counter(page);
+  }
+}

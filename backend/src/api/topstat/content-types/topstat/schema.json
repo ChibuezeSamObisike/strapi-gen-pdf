@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "topstats",
+  "info": {
+    "singularName": "topstat",
+    "pluralName": "topstats",
+    "displayName": "topstat"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "report": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::report.report",
+      "inversedBy": "topstats"
+    }
+  }
+}
